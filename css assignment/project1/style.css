@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: bisque;
+  }
+  h2{
+    font-size: 33px;
+    padding-left: 130px;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-auto-rows: 200px;
+    width: 80%;
+    margin: 50px auto;
+    gap: 8px;
+    border: 2px solid black;
+    box-shadow: 0px 5px 100px rgb(7, 7, 7);
+  }
+  .box-1 img {
+    object-fit: cover;
+    height: 200px;
+    width: 100%;
+  }
+  .space-1 {
+    grid-column: span 3;
+  }
+  .space-2 {
+    grid-column: span 2;
+  }
+  .long-space {
+    grid-column: 5;
+    grid-row: 1/5;
+    background-color: rgb(87, 37, 37);
+  }
+  ul li {
+    list-style: none;
+    margin: 10px 0;
+  }
+  ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+  ul li a:hover {
+    color: rgb(18, 19, 18);
+    transition: 0.2s;
+    transform: scale(1.5);
+  }
+  nav {
+    text-align: end;
+    padding: 10px 20px;
+  }
+  .nav-1 h1 {
+    font-size: 25px;
+    color: white;
+    margin: 60px 0 0 0;
+  }
+  ul {
+    margin-top: 30px;
+  }
+  .icon i {
+    color: white;
+    font-size: 25px;
+    margin-top: 30px;
+    padding: 0 10px 0 10px;
+  }
+  .icon i:hover {
+    color: rgb(13, 14, 14);
+    font-size: 25px;
+    transition: 0.2s;
+    transform: scale(1.5);
+    margin-top: 30px;
+    padding: 0 10px 0 10px;
+  }
+  @media (max-width: 575.98px) {
+    .nav-1 h1 {
+      text-align: center;
+      margin-top: 5px;
+    }
+    nav ul,
+    .icon {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    .long-space {
+      grid-column: 1/6;
+      grid-row: 1;
+      background-color: rgb(6, 6, 6);
+      grid-auto-rows: 50px;
+    }
+    .nav-1 h1 {
+      text-align: center;
+      margin-top: 5px;
+    }
+    nav ul,
+    .icon {
+      display: flex;
+      justify-content: space-around;
+    }
+    .main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 200px;
+      gap: 1px;
+    }
+    .space-1 {
+      grid-column: span 2;
+    }
+    .long {
+      grid-row: 5;
+      grid-column: 1/5;
+    }
+    .box-1 img {
+      object-fit: cover;
+      height: 200px;
+      width: 100%;
+    }
+    h2{
+        text-align: center;
+        padding-right: 130px;
+    }
+  }

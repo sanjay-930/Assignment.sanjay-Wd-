@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.section-2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+span {
+    border: 1px solid black;
+    padding: 1px 6px;
+
+}
+span:hover{
+   background-color: rgb(215, 211, 211);
+
+}
+
+.item-1 {
+    width: 400px;
+    height: 300px;
+    margin: 8px;
+    flex-basis: 30%;
+    border: 2px solid black;
+}
+
+.div-1 {
+    text-align: center;
+    height: 160px;
+    line-height: 160px;
+    color: white;
+    background-color: #202020;
+}
+.div-2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.content {
+    padding: 30px;
+}
