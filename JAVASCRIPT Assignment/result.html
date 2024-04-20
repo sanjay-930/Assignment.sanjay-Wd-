@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box{
+            height: 550px;
+            width: 600px;
+            border: 3px solid black;
+            margin: 0 auto;
+            padding-left: 20px;
+        }
+        input , .btn {
+            font-size: 20px;
+            align-items: right;
+        }
+        .subjects{
+            display: flex;
+        }
+        .row-50{
+            width: 50%;
+        }
+        label{
+            font-size: 22px;
+        }
+        p{
+            font-size: 20px;
+            text-align: right;
+            margin-right: 100px;
+        }
+        h4{
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        .btn{
+            font-size: 20px;
+            padding: 4px;
+            width: 100px;
+            margin-left: 20px;
+        }
+        .final{
+            width: 90%;
+            display: flex;
+        }
+        b{
+            color: blue;
+        }
+
+
+    </style>
+</head>
+<body>
+    <br>
+    <h2 align="center"><u>Practical Tasks</u></h2>
+    <br>
+    <h2>2. Create basic math operation in JS .</h2>
+    <br><br>
+    <ul>
+        <div class="box">
+            <h4>Marksheet for Information Technology</h4>
+            <p>Enter Marks</p>
+            <br>
+               <div class="subjects">
+                <div class="row-50">
+                    <label for="subject">1. C language</label><br><br>
+                    <label for="subject">2. C++ language</label><br><br>
+                    <label for="subject">3. Database</label><br><br>
+                    <label for="subject">4. HTML</label><br><br>
+                    <label for="subject">5. css</label><br><br>
+                    <label for="subject">6. php</label><br><br>
+                    <label for="subject">7. Core java</label><br><br>
+                   </div>
+                   <div class="row-50">
+                    <input type="number" id="number1"><br><br>
+                    <input type="number" id="number2"><br><br>
+                    <input type="number" id="number3"><br><br>
+                    <input type="number" id="number4"><br><br>
+                    <input type="number" id="number5"><br><br>
+                    <input type="number" id="number6"><br><br>
+                    <input type="number" id="number7"><br><br>
+                    <button onclick="result()" class="btn">Result</button><br><br>
+                   </div>
+               </div>
+               <div class="final">
+                <div class="row-50"><p>Total is : <b id="b1">00</b>/350</p></div>
+                <div class="row-50"><p>Percentage is : <b id="b2">00</b>%</p></div>
+               </div>
+        </div>
+    </ul>
+
+    <script>
+        function result() {
+            let a = document.getElementById('number1').value;
+            let b = document.getElementById('number2').value;
+            let c = document.getElementById('number3').value;
+            let d = document.getElementById('number4').value;
+            let e = document.getElementById('number5').value;
+            let f = document.getElementById('number6').value;
+            let g = document.getElementById('number7').value;
+            sum = parseInt(a) + parseInt(b) +parseInt(c) + parseInt(d) +parseInt(e) + parseInt(f)+parseInt(g);
+            document.getElementById("b1").innerHTML =sum;
+            percentage = ((parseInt(a) + parseInt(b) +parseInt(c) + parseInt(d) +parseInt(e) + parseInt(f)+parseInt(g))*2) / 7;
+            document.getElementById("b2").innerHTML =percentage;
+
+        }
+    </script>
+</body>
+</html>
